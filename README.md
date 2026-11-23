@@ -9,8 +9,8 @@ Landing Page responsive desarrollada por **AyniTech** para el curso de **Diseño
 
 ## Enlaces del proyecto
 
-- **Repositorio:** https://github.com/jota789/warmikallpa-landing
-- **Landing Page (GitHub Pages):** https://jota789.github.io/warmikallpa-landing/
+- **Repositorio:** https://github.com/jota789/warmikallpa-landing1
+- **Landing Page (GitHub Pages):** https://jota789.github.io/warmikallpa-landing1/
 
 ---
 
