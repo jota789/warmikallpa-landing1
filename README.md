@@ -1,4 +1,4 @@
-[readme_del_proyecto_warmikallpa (2).md](https://github.com/user-attachments/files/35252187/readme_del_proyecto_warmikallpa.2.md)
+
 # WarmiKallpa — Tu seguridad, tu decisión
 
 Landing Page responsive desarrollada por **AyniTech** para el curso de **Diseño de Experimentos de Ingeniería de Software / Diseño UX/UI** (UPC).
