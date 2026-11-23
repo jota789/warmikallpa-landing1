@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="WarmiKallpa te acompaña durante tus viajes en el transporte público de Lima con información, orientación y opciones para pedir apoyo.">
+    <meta name="theme-color" content="#F7F3FB">
+
+    <title>WarmiKallpa | Tu seguridad, tu decisión</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Leaflet: mapa interactivo -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header class="encabezado">
+        <nav class="navegacion contenedor" aria-label="Navegación principal">
+
+            <a href="#inicio" class="marca" aria-label="WarmiKallpa, inicio">
+                <img
+                    src="imagenes/logo-warmikallpa-web.svg"
+                    alt="Logo de WarmiKallpa"
+                >
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="menuPrincipal"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu-principal" id="menuPrincipal">
+                <a href="#funciones">Funciones</a>
+                <a href="#mapa">Mapa de riesgo</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#equipo">Equipo</a>
+                <a href="#demo" class="boton boton-nav">Probar demo</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-contenido contenedor">
+
+                <div class="hero-texto">
+
+                    <div class="etiqueta">
+                        <span class="punto-etiqueta"></span>
+                        Una herramienta para acompañarte
+                    </div>
+
+                    <h1>
+                        Tu seguridad,<br>
+                        tu <span class="decision-curva">decisión.</span>
+                    </h1>
+
+                    <p class="hero-descripcion">
+                        Una herramienta que te acompaña durante tus viajes
+                        en el transporte público de Lima, brindándote
+                        orientación, información y opciones para pedir apoyo.
+                    </p>
+
+                    <div class="hero-acciones">
+
+                        <a href="#funciones" class="boton boton-principal">
+                            Conoce WarmiKallpa
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#demo" class="boton boton-secundario">
+                            Explorar demo
+                        </a>
+
+                    </div>
+
+                    <p class="hero-nota">
+                        <span aria-hidden="true">♡</span>
+                        Tu privacidad y tus decisiones son lo primero.
+                    </p>
+
+                </div>
+
+
+                <!-- MOCKUP DE LA APLICACIÓN -->
+                <div class="hero-visual">
+
+                    <div class="decoracion decoracion-uno"></div>
+                    <div class="decoracion decoracion-dos"></div>
+
+                    <div class="mockup-contenedor">
+                        <img
+                            src="imagenes/mockup-warmikallpa-3d.svg"
+                            alt="Aplicación móvil WarmiKallpa"
+                            class="mockup-celular"
+                        >
+                    </div>
+
+                    <div class="burbuja-visual burbuja-superior">
+                        <span>✓</span>
+                        Información a tu alcance
+                    </div>
+
+                    <div class="burbuja-visual burbuja-inferior">
+                        <span>♡</span>
+                        Tú decides qué compartir
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FUNCIONES -->
+        <section class="seccion-funciones" id="funciones">
+
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+
+                    <span class="sobretitulo">WarmiKallpa contigo</span>
+
+                    <h2>
+                        Pequeñas acciones que pueden hacer la diferencia.
+                    </h2>
+
+                    <p>
+                        Herramientas pensadas para acompañarte antes,
+                        durante y después de tus viajes.
+                    </p>
+
+                </div>
+
+
+                <div class="funciones-grid">
+
+                    <article class="tarjeta-funcion">
+                        <span class="funcion-numero">01</span>
+                        <div class="funcion-icono icono-fucsia">♡</div>
+
+                        <h3>Alerta silenciosa</h3>
+
+                        <p>
+                            Una opción discreta para solicitar apoyo
+                            sin llamar la atención.
+                        </p>
+
+                        <a href="#demo" class="funcion-enlace">
+                            Conocer la demo →
+                        </a>
+                    </article>
+
+
+                    <article class="tarjeta-funcion">
+                        <span class="funcion-numero">02</span>
+                        <div class="funcion-icono icono-violeta">⌖</div>
+
+                        <h3>Mapa colaborativo</h3>
+
+                        <p>
+                            Consulta información de zonas y reportes
+                            para conocer mejor tu recorrido.
+                        </p>
+
+                        <a href="#mapa" class="funcion-enlace">
+                            Explorar mapa →
+                        </a>
+                    </article>
+
+
+                    <article class="tarjeta-funcion">
+                        <span class="funcion-numero">03</span>
+                        <div class="funcion-icono icono-turquesa">♡</div>
+
+                        <h3>Contactos de confianza</h3>
+
+                        <p>
+                            Elige con quién compartir tus viajes
+                            y qué información deseas compartir.
+                        </p>
+
+                        <a href="#como-funciona" class="funcion-enlace">
+                            Cómo funciona →
+                        </a>
+                    </article>
+
+
+                    <article class="tarjeta-funcion">
+                        <span class="funcion-numero">04</span>
+                        <div class="funcion-icono icono-lavanda">✧</div>
+
+                        <h3>Orientación y apoyo</h3>
+
+                        <p>
+                            Encuentra información sobre canales de
+                            atención, derechos y pasos a seguir.
+                        </p>
+
+                        <a href="#como-funciona" class="funcion-enlace">
+                            Ver orientación →
+                        </a>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- MAPA COLABORATIVO -->
+        <section class="seccion-mapa" id="mapa">
+
+            <div class="mapa-contenido contenedor">
+
+                <div class="mapa-texto">
+
+                    <span class="sobretitulo">
+                        Infórmate antes de viajar
+                    </span>
+
+                    <h2>
+                        Conoce mejor las zonas de tu recorrido.
+                    </h2>
+
+                    <p>
+                        Consulta información colaborativa sobre reportes
+                        por zona, horarios y estaciones. Los datos son
+                        orientativos y no predicen lo que ocurrirá durante
+                        un viaje.
+                    </p>
+
+                    <div class="leyenda-riesgo">
+                        <span>
+                            <i class="riesgo-bajo"></i>
+                            Riesgo bajo
+                        </span>
+
+                        <span>
+                            <i class="riesgo-medio"></i>
+                            Riesgo medio
+                        </span>
+
+                        <span>
+                            <i class="riesgo-alto"></i>
+                            Riesgo alto
+                        </span>
+
+                        <span>
+                            <i class="sin-datos"></i>
+                            Sin datos
+                        </span>
+
+                        <span class="etiqueta-ejemplo">
+                            Datos de ejemplo
+                        </span>
+                    </div>
+
+                    <p class="nota-mapa">
+                        La información del mapa es referencial y depende
+                        de los reportes disponibles.
+                    </p>
+
+                </div>
+
+
+                <!-- MAPA REAL -->
+                <div class="mapa-real-contenedor">
+
+                    <div class="mapa-real-encabezado">
+
+                        <div>
+                            <span class="mapa-real-punto"></span>
+                            Lima Metropolitana
+                        </div>
+
+                        <button
+                            type="button"
+                            id="ubicarme"
+                            class="boton-ubicacion"
+                        >
+                            ◎ Mi ubicación
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="mapaReal"
+                        role="application"
+                        aria-label="Mapa interactivo de Lima Metropolitana"
+                    ></div>
+
+                    <div class="mapa-real-pie">
+                        <span>⌖</span>
+                        Selecciona un punto del mapa para marcar
+                        una ubicación de prueba.
+                    </div>
+
+                    <p
+                        id="ubicacionSeleccionada"
+                        class="ubicacion-seleccionada"
+                        aria-live="polite"
+                    >
+                        Todavía no has seleccionado una ubicación.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CÓMO FUNCIONA -->
+        <section class="seccion-problema" id="como-funciona">
+
+            <div class="problema-contenido contenedor">
+
+                <div class="problema-titulo">
+
+                    <span class="sobretitulo">A tu manera</span>
+
+                    <h2>
+                        Tu recorrido, tus decisiones.
+                    </h2>
+
+                </div>
+
+
+                <div class="problema-texto">
+
+                    <p>
+                        Cada persona vive sus trayectos de manera distinta.
+                        Por eso, WarmiKallpa reúne herramientas de orientación
+                        y acompañamiento que puedes utilizar según tus
+                        necesidades.
+                    </p>
+
+                    <p>
+                        Tú decides cuándo compartir tu recorrido, qué
+                        información consultar y a quién acudir.
+                    </p>
+
+                    <a href="#demo" class="enlace-texto">
+                        Explorar la experiencia →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DEMOSTRACIÓN -->
+        <section class="seccion-demo" id="demo">
+
+            <div class="demo-contenido contenedor">
+
+                <div class="demo-texto">
+
+                    <span class="sobretitulo">Conoce la experiencia</span>
+
+                    <h2>
+                        ¿Quieres conocer WarmiKallpa?
+                    </h2>
+
+                    <p>
+                        Explora una demostración de algunas funciones
+                        y descubre cómo se vería la experiencia dentro
+                        de la aplicación.
+                    </p>
+
+                    <ul class="demo-lista">
+                        <li>
+                            <span>✓</span>
+                            Conoce la alerta de ayuda
+                        </li>
+
+                        <li>
+                            <span>✓</span>
+                            Explora las herramientas disponibles
+                        </li>
+
+                        <li>
+                            <span>✓</span>
+                            Revisa cómo funciona el acompañamiento
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <div class="demo-panel">
+
+                    <div class="demo-panel-encabezado">
+
+                        <div>
+                            <span class="demo-indicador"></span>
+                            WarmiKallpa
+                        </div>
+
+                        <span class="demo-etiqueta">
+                            Vista de prueba
+                        </span>
+
+                    </div>
+
+
+                    <div class="demo-pantalla">
+
+                        <div class="demo-escudo">♡</div>
+
+                        <h3>Tu espacio de ayuda</h3>
+
+                        <p>
+                            Si necesitas apoyo, puedes conocer
+                            cómo se presenta esta función.
+                        </p>
+
+
+                        <button
+                            class="boton-sos"
+                            id="botonSOS"
+                            type="button"
+                        >
+                            <span>♡</span>
+                            <strong>Pedir ayuda</strong>
+                        </button>
+
+
+                        <div
+                            class="estado-demo"
+                            id="estadoDemo"
+                            role="status"
+                            aria-live="polite"
+                        >
+                            <span class="estado-punto"></span>
+                            <span id="textoEstado">
+                                Demostración lista
+                            </span>
+                        </div>
+
+
+                        <label class="demo-opcion">
+                            <input type="checkbox" id="sinConexion">
+                            Simular que no hay conexión
+                        </label>
+
+
+                        <div class="codigo-caso" id="codigoCaso" hidden>
+                            <span>CÓDIGO DE DEMOSTRACIÓN</span>
+                            <strong id="numeroCaso">WK-2026-001</strong>
+                        </div>
+
+
+                        <button
+                            class="boton-cancelar"
+                            id="cancelarSOS"
+                            type="button"
+                            hidden
+                        >
+                            Cancelar demostración
+                        </button>
+
+                    </div>
+
+
+                    <p class="demo-aclaracion">
+                        Esta demostración no envía alertas reales ni
+                        contacta servicios de emergencia.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+<!-- EQUIPO -->
+<section class="seccion-equipo" id="equipo">
+
+    <div class="contenedor equipo-contenido">
+
+        <div class="encabezado-seccion equipo-encabezado">
+
+            <span class="sobretitulo">CONOCE A AYNITECH</span>
+
+            <h2>Personas detrás de una idea que busca hacer la diferencia.</h2>
+
+            <p>
+                Somos un equipo multidisciplinario que combina conocimientos,
+                creatividad y compromiso para desarrollar WarmiKallpa,
+                una propuesta tecnológica enfocada en la orientación,
+                prevención y acompañamiento de las mujeres.
+            </p>
+
+        </div>
+
+
+        <div class="equipo-grid">
+
+            <!-- LUCIANA -->
+            <article class="integrante integrante-lider">
+
+                <div class="integrante-foto-contenedor">
+
+                    <img
+                        src="imagenes/equipo-luciana.jpg"
+                        alt="Luciana Andrea Cerreño Ronceros"
+                        class="integrante-foto"
+                        loading="lazy"
+                    >
+
+                    <span class="integrante-etiqueta">
+                        Team Leader
+                    </span>
+
+                </div>
+
+                <div class="integrante-info">
+
+                    <span class="integrante-rol">
+                        LIDERAZGO Y COORDINACIÓN
+                    </span>
+
+                    <h3>Luciana Andrea Cerreño Ronceros</h3>
+
+                    <p class="integrante-carrera">
+                        Ingeniería de Sistemas de Información
+                    </p>
+
+                    <p class="integrante-descripcion">
+                        Lidera la planificación y coordinación del equipo,
+                        supervisando los avances y la integración de los
+                        entregables. Participa activamente en el diseño de
+                        la solución, la revisión y consolidación del informe,
+                        así como en el desarrollo de la propuesta web.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- SHAELL -->
+            <article class="integrante">
+
+                <div class="integrante-foto-contenedor">
+
+                    <img
+                        src="imagenes/equipo-shaell.jpg"
+                        alt="Shaell Andy Gutierrez Chancha"
+                        class="integrante-foto"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="integrante-info">
+
+                    <span class="integrante-rol">
+                        ANÁLISIS Y EXPERIENCIA DE USUARIO
+                    </span>
+
+                    <h3>Shaell Andy Gutierrez Chancha</h3>
+
+                    <p class="integrante-carrera">
+                        Ingeniería de Sistemas de Información
+                    </p>
+
+                    <p class="integrante-descripcion">
+                        Contribuye al análisis de las necesidades de los
+                        usuarios y a la definición de propuestas que
+                        favorezcan una experiencia intuitiva. Participa
+                        en la organización de información y en la
+                        construcción de los entregables del proyecto.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- KEVIN -->
+            <article class="integrante">
+
+                <div class="integrante-foto-contenedor">
+
+                    <img
+                        src="imagenes/equipo-kevin.jpg"
+                        alt="Kevin Abel Granthon Bonilla"
+                        class="integrante-foto"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="integrante-info">
+
+                    <span class="integrante-rol">
+                        DESARROLLO TECNOLÓGICO
+                    </span>
+
+                    <h3>Kevin Abel Granthon Bonilla</h3>
+
+                    <p class="integrante-carrera">
+                        Ingeniería de Software
+                    </p>
+
+                    <p class="integrante-descripcion">
+                        Aporta conocimientos técnicos para evaluar
+                        alternativas de implementación y estructurar
+                        las funcionalidades de la plataforma. Contribuye
+                        al análisis de viabilidad y a la construcción
+                        de la solución tecnológica.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- JOAQUÍN -->
+            <article class="integrante">
+
+                <div class="integrante-foto-contenedor">
+
+                    <img
+                        src="imagenes/equipo-joaquin.jpg"
+                        alt="Joaquín Leonardo Martinez Talavera"
+                        class="integrante-foto"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="integrante-info">
+
+                    <span class="integrante-rol">
+                        DISEÑO Y ORGANIZACIÓN
+                    </span>
+
+                    <h3>Joaquín Leonardo Martinez Talavera</h3>
+
+                    <p class="integrante-carrera">
+                        Ingeniería de Sistemas de Información
+                    </p>
+
+                    <p class="integrante-descripcion">
+                        Participa en la organización de los componentes
+                        de la propuesta y en el desarrollo de la experiencia
+                        de usuario. Contribuye a mantener la coherencia
+                        entre las necesidades identificadas, los flujos
+                        y las funcionalidades planteadas.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- JOSUÉ -->
+            <article class="integrante">
+
+                <div class="integrante-foto-contenedor">
+
+                    <img
+                        src="imagenes/equipo-josue.jpg"
+                        alt="Josué Artemio Romero Ayala"
+                        class="integrante-foto"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="integrante-info">
+
+                    <span class="integrante-rol">
+                        IMPLEMENTACIÓN Y SOLUCIONES
+                    </span>
+
+                    <h3>Josué Artemio Romero Ayala</h3>
+
+                    <p class="integrante-carrera">
+                        Ingeniería de Software
+                    </p>
+
+                    <p class="integrante-descripcion">
+                        Contribuye al análisis y desarrollo de los
+                        componentes tecnológicos de WarmiKallpa.
+                        Participa en la revisión de funcionalidades,
+                        la organización de recursos y la evaluación
+                        de alternativas para mejorar la plataforma.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="equipo-cierre">
+            <span>✦</span>
+            <p>
+                Cinco perspectivas, un mismo propósito:
+                construir una experiencia que acompañe y brinde orientación.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <div class="footer-contenido contenedor">
+
+            <div class="footer-marca">
+
+                <a
+                    href="#inicio"
+                    class="footer-logo"
+                    aria-label="Volver al inicio"
+                >
+                    <img
+                        src="imagenes/logo-warmikallpa-web.svg"
+                        alt="Logo de WarmiKallpa"
+                    >
+                </a>
+
+                <p>Tu seguridad, tu decisión.</p>
+
+                <span class="footer-empresa">
+                    Una propuesta de AyniTech.
+                </span>
+
+            </div>
+
+            <div class="footer-enlaces">
+
+                <h3>Explora</h3>
+
+                <a href="#funciones">Funciones</a>
+                <a href="#mapa">Mapa de riesgo</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#equipo">Equipo</a>
+
+            </div>
+            <div class="footer-enlaces">
+
+                <h3>WarmiKallpa</h3>
+
+                <a href="#demo">Probar demostración</a>
+                <a href="#inicio">Volver al inicio</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-final contenedor">
+
+            <p>© 2026 WarmiKallpa · AyniTech</p>
+            <p>Proyecto académico · UPC</p>
+
+        </div>
+
+    </footer>
+
+    <!-- LIBRERÍA DEL MAPA -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- JAVASCRIPT DEL PROYECTO -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
